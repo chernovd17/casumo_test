@@ -31,8 +31,9 @@ public class ApiEnvironment{
         } else
             return defProp.getProperty(propName, System.getProperty(propName));//returns default from property files
     }
-    public static String getURL() {
-        return get().getProperty("url");
+
+    public static int getPort() {
+        return Integer.parseInt(get().getProperty("port"));
     }
 
     public static int getRequestTimeout() {
