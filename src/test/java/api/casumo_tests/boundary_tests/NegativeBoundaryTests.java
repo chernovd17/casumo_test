@@ -27,7 +27,7 @@ public class NegativeBoundaryTests extends BaseApiTest {
     @Test(testName = "Verification of server errors for length max+1 input", dataProvider = "dataProvider")
     public void mainTest(String inputString) {
         try {
-           sendRequestAndGetResponseValue(inputString);
+            sendRequestAndGetResponseValue(inputString);
             Assert.assertTrue(false, "Expected error not found");
         } catch (Exception e){
             if (!(e instanceof NoHttpResponseException))
